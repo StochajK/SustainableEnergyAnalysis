@@ -35,11 +35,11 @@ def main():
     name_lst = [item.country_name for item in renewable_energy_data]
     renewable_eng_lst = [item.amt for item in renewable_energy_data]
     
-    d = {"name": name_lst, "REP": renewable_eng_lst}
+    d = {"iso": iso_lst, "REP": renewable_eng_lst}
     df = pd.DataFrame(data = d, index = [i for i in range(len(iso_lst))])
     print(df)
     
-    fig = px.choropleth(df, locations = "name", locationmode = "ISO-3",
+    fig = px.choropleth(df, locations = "iso", locationmode = "ISO-3",
                     color="REP",
                     color_continuous_scale=px.colors.sequential.Plasma)
     
