@@ -1,5 +1,4 @@
 """
-Kimberly Stochaj
 DS2001
 Practicum project - creating a class to hold data used in cloropleth.py
 16 April, 2022
@@ -14,7 +13,10 @@ class EnergyStat:
     def __init__(self, name_string, amt, code):
         """ constructor for an EnergyStat object
         """
-        self.amt = amt
+        if type(amt) == float or type(amt) == int: 
+            self.amt = float(amt)
+        else:
+            self.amt = None
         self.country_name, self.source = self.get_info(name_string)
         self.country_code = code
     
@@ -26,6 +28,7 @@ class EnergyStat:
         return (lst[1], lst[0])
     
     def __str__(self):
+        """ Reader friendly string version of an instance of this object"""
         return self.country_name + " produces " + str(self.amt) + " for " + self.source 
         
         
