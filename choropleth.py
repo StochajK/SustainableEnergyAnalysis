@@ -33,7 +33,7 @@ def get_percent(partial_lst, total_lst):
                     if obj2.amt != None:
                         percent_lst.append(EnergyStat("Percent Renewable electricity "
                                                       "generation, " + obj2.country_name + 
-                                                      ", Annual", obj2.amt/total, iso))
+                                                      ", Annual", (obj2.amt/total) * 100, iso))
                         break
                     else:
                         percent_lst.append(EnergyStat("Percent Renewable electricity "
