@@ -1,6 +1,6 @@
 """
 DS2001
-Code for Final Project - Choropleth Map
+Code for Final Project - Choropleth maps
 7 April, 2022
 choropleth.py
 """
@@ -139,7 +139,7 @@ def main():
     
     # Render the GDP per capita choropleth
     create_choropleth(gdp_isos, gdp_per_capita, "GDP per capita", title = "GDP per Capita",
-                      color_scale = "deep", val_range = [0, 90000])
+                      color_scale = "greens", val_range = [0, 90000])
         
     
 main()
