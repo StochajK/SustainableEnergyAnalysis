@@ -40,8 +40,8 @@ def make_plot(xvals, ylst1, ylst2, name):
     plt.ylim(-50, 50)
     plt.yticks([(i - 5) * 10 for i in range(11)])
     plt.title("GDP per Capita and Renewable\n Energy Production for" + name)
-    plt.xlabel("year")
-    plt.ylabel("% change")
+    plt.xlabel("Year")
+    plt.ylabel("% Change")
     plt.legend()
     plt.show()
 
