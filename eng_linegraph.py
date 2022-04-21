@@ -29,8 +29,13 @@ def get_pct_change(lst):
     return pct_lst
 
 def make_plot(xvals, ylst1, ylst2, name):
-    ''' Function: 
-        Parameters:
+    ''' Function: make_plot
+        Parameters: xvals - a list to be the values on the x axis
+                    ylst1 - a list to represent the y values for the first
+                            series on the plot
+                    ylst2 - a list to represent the y values for the second
+                            series on the plot
+                    name - the name of the country that the data refers to
         Returns: Nothing, just renders the graph to the plots pannel
     '''
     pct_lst1 = get_pct_change(ylst1)
@@ -46,9 +51,11 @@ def make_plot(xvals, ylst1, ylst2, name):
     plt.show()
 
 def main():
+    # Get data for GDP from JSON file
     with open(ELECTRICITY_FILE, "r") as infile:
         data = json.load(infile)
-        
+    
+    # Make the empty lists to store the GDP data
     brazil_renewable = []
     iran_renewable = []
     norway_renewable = []
