@@ -65,6 +65,7 @@ def main():
     
     years = [i for i in range(1981, 2021)]
     
+    # Sort through the JSON file, and organize the objects based on their country and source
     for item in data:
         for i in range(len(item["data"])):
             energy_obj = EnergyStat(item["name"], item["data"][i]["value"], 
